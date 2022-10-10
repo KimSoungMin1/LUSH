@@ -1,0 +1,153 @@
+.wrap{
+  
+}
+body, form, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, fieldset, th, td, input, textarea, button, select {
+  font-family: "NotoSans",dotum,'돋움';
+  color: #222;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+li{
+  list-style: none;
+}
+header{
+  width: 100%;
+  height: 128px;
+}
+.wrap .text{
+  height: 32px;
+  text-align: center;
+  background: black;
+}
+.wrap .text >a{
+  font-size: 14.6667px;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+}
+nav{
+  width: 1272px;
+  height: 96px;
+  margin: 0 auto;
+  padding: 0 24px;
+  
+}
+.left_menu{
+  height: 100%;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left{
+  margin-left: 4em;
+}
+.left >li{
+  padding: 1.5em;
+  font-family: "NotoSans";
+  color: #222;
+}
+.left .open_menu .nav_container{
+  position: fixed;
+  display: none;
+  left: 0;
+  margin-top: 30px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 10px 14px rgb(0 0 0 / 10%);
+  z-index: 10;
+}
+.inner{
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 1624px;
+  border-top: none;
+  padding: 30px 0 24px 0;
+}
+.left >li{
+  cursor: pointer;
+}
+.left >li:hover{
+  color: #669900;
+}
+.left .open_menu:hover .nav_container{
+  display: block;
+  
+}
+.nav_container .inner .top,
+.top_tow{
+  align-items: flex-start;
+}
+.top_tow{
+  justify-content: flex-start;
+}
+.top_tow >li{
+  margin-left: 50px;
+}
+.lest_title{
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  font-family: "NotoSans"
+}
+.list-title{
+  margin-top: 10px;
+}
+.list-title .list{
+  font-weight:200px;
+  line-height: 2em;
+  color: #535353;
+  font-size: 14px;
+}
+.list:hover{
+  color: #669900;
+}
+
+.icon >li{
+  padding: 0 12px;
+}
+.icon .hid:hover .small_menu{ 
+  display: block;
+}
+.small_menu{
+  width: 100px;
+  position: fixed;
+  display: none;
+  background-color: #fff;
+  box-shadow: 0px 10px 14px rgb(0 0 0 / 10%);
+  z-index: 10;
+  padding: 30px;
+}
+.small_menu >ul{
+  line-height: 3em;
+  text-align: center;
+}
+.section_slide{
+  width: 1300px;
+  display: flex;
+  margin: 0 auto;
+}
+.slide_inner{
+  width: 1224px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+.slide_inner .slide{
+  display: flex;
+  position: absolute;
+  transition: left 2s;
+}
+.prev,.next{
+  position: relative;
+  top: 300px;
+  height: 50px;
+  font-size: 36px;
+  margin: 0 10px;
+  background-color: #669900;
+}
+
