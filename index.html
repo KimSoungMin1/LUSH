@@ -7,10 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUSH</title>
   <link rel="icon" href="./img/logo.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="./main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script defer src="./main.js"></script>
 </head>
 
@@ -24,9 +27,9 @@
           <ul class="flex left">
             <li class="open_menu">
               제품
-              <div class="nav_container">
+              <div class="container nav">
                 <div class="inner">
-                  <ul class="flex top">
+                  <ul class="top">
                     <li class="lest_title">
                       베스트
                       <ul class="list-title">
@@ -155,7 +158,7 @@
             </li>
             <li class="open_menu">
               러쉬소개
-              <div class="nav_container">
+              <div class="container nav">
                 <div class="inner">
                   <ul class="flex top_tow">
                     <li class="lest_title">
@@ -196,17 +199,46 @@
           </ul>
         </div>
         <ul class="icon flex">
-          <li><a href=""><img src="	https://www.lush.co.kr/content/renewal/pc/images/ico/search.svg" alt="검색"></a></li>
-          <li><a href=""><img src="	https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="장바구니"></a></li>
+          <li class="src">
+            <a href="javaScript:void(0)"><img src="	https://www.lush.co.kr/content/renewal/pc/images/ico/search.svg" alt="검색" id="src"></a>
+            <div class="search container">
+              <div class="inner">
+                <div class="search_bar">
+                  <input type="text" placeholder="혹시 더티마니아 인가요?">
+                  <a href="javaScript:void(0)"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/search.svg" alt="검색버튼" width="40px" height="40px"></a>
+                </div>
+                <a href="javaScript:void(0)" id="dle"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/ico_close_x.svg" alt="취소버튼"></a>
+                <div class="flex_box">
+                  <div class="best_src">
+                    <h2>인기검색어</h2>
+                    <div class="best_suv">
+                      <a href="javaScript:void(0)">#크리스마스</a>
+                      <a href="javaScript:void(0)">#할로윈</a>
+                      <a href="javaScript:void(0)">#슬리피</a>
+                      <a href="javaScript:void(0)">#페이스마스크</a>
+                      <a href="javaScript:void(0)">#더티</a>
+                      <a href="javaScript:void(0)">#보디스프레이</a>
+                      <a href="javaScript:void(0)">#퍼퓸</a>
+                      <a href="javaScript:void(0)">#입욕제</a>
+                    </div>
+                  </div>
+                  <div class="best_srcs">
+                    <h2>최근검색어</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="javaScript:void(0)"><img src="	https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="장바구니"></a></li>
           <li class="hid">
-            <a href=""><img src="	https://www.lush.co.kr/content/renewal/pc/images/ico/account.svg" alt="마이페이지"></a>
+            <a href="javaScript:void(0)"><img src="	https://www.lush.co.kr/content/renewal/pc/images/ico/account.svg" alt="마이페이지"></a>
             <div class="small_menu">
               <ul>
-                <li><a href="" class="list">로그인</a></li>
-                <li><a href="" class="list">회원가입</a></li>
-                <li><a href="" class="list">커뮤니티</a></li>
-                <li><a href="" class="list">고객센터</a></li>
-                <li><a href="" class="list">선물함</a></li> 
+                <li><a href="javaScript:void(0)" class="list">로그인</a></li>
+                <li><a href="javaScript:void(0)" class="list">회원가입</a></li>
+                <li><a href="javaScript:void(0)" class="list">커뮤니티</a></li>
+                <li><a href="javaScript:void(0)" class="list">고객센터</a></li>
+                <li><a href="javaScript:void(0)" class="list">선물함</a></li> 
               </ul>
             </div>
           </li>
@@ -214,23 +246,182 @@
       </nav>
     </header>
 
-
+    <!-- 이벤트 카드 -->
     <section>
-      <div class="section_slide">
-        <p class="prev">prev</p>
-      <div class="slide_inner">
-        <ul class="slide">
-          <li class="slide_img"><img src="./img/20220926095203L.png" alt=""></li>
-          <li class="slide_img"><img src="./img/20221006124652L.png" alt=""></li>
-          <li class="slide_img"><img src="./img/20221006095042L.png" alt=""></li>
-          <li class="slide_img"><img src="./img/20221004094545L.png" alt=""></li>
-          <li class="slide_img"><img src="./img/20220930105940L.png" alt=""></li>
-          <li class="slide_img"><img src="./img/20220928120232L.png" alt=""></li>
-          <li class="slide_img"><img src="./img/20220926145731L.png" alt=""></li>
-          <li class="slide_img"><img src="./img/20220926140640L.png" alt=""></li>
-        </ul>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/20220926095203L.png" alt="">
+            <div class="baner_text">
+              <p>2022 <br> 할로윈 애디션</p>
+              <span>할로윈타운으로 놀러오세요!</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/20220926145731L.png" alt="">
+            <div class="baner_text">
+              <p>나의입욕이 <br> 가치를있기를!</p>
+              <span>수마트랑 오랑우탄을<br>지켜주세요!</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/20220928120232L.png" alt="">
+            <div class="baner_text">
+              <p>20 YEARS <br> SHOWCASE</p>
+              <span>[EVENT] 세상을 비트는 욕심쟁이 스무살</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/20220930105940L.png" alt="">
+            <div class="baner_text">
+              <p>미리만나는<br> 크리스마스</p>
+              <span>[NEW]산타가 주는 향기로운 선물</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/20221004094545L.png" alt="">
+            <div class="baner_text">
+              <p>다운로드 <br> 러쉬 10월</p>
+              <span>#할로윈 배쓰밤 #제법무서워</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/20221006095042L.png" alt="">
+            <div class="baner_text">
+              <p>10월포토 <br>리뷰이벤트</p>
+              <span>시월의 <br>어느 멋진 날에!</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/20221006124652L.png" alt="">
+            <div class="baner_text">
+              <p>카마한장에<br>가을을담다</p>
+              <span>[EVENT] 가을을 기억하는방법!</span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-      <p class="next">next</p>
+    </section>
+
+    <!-- 리뷰 -->
+    <section>
+      <div class="swipers mySwipers">
+        <div class="swiper-wrappers">
+          <ul class="swiper_img">
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">무시무시한</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20220819154639M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">정성스러운선물</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20220408091637M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt=""width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">열대우림보호</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20220706122541M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">가을겨울</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20211008113037M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">기분전환</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20211008105246M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">러쉬스러운향</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20211007150137M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">피로를 풀어주는</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20211008095605M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">추운시즌</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="img/20220822162501M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">부드러움을 선물</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20211008112304M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">중독성있는</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20211007150137M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">완전 촉촉</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20211008153740M.jpg" alt="" id="imgs">
+            </li>
+            <li class="swiper-slides">
+              <h2 class="star"><img src="https://www.lush.co.kr/content/renewal/pc/images/ico/stars5.svg" alt="" width="69px" height="11px"></h2>
+              <div class="title_box">
+                <p class="title">쿨링감과 개운함</p>
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/favourites.svg" alt="" width="24px" height="24px">
+                <img src="https://www.lush.co.kr/content/renewal/pc/images/ico/bag.svg" alt="" width="24px" height="24px">
+              </div>
+              <img src="./img/20211008092623M.jpg" alt="" id="imgs">
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
   </div>
