@@ -18,7 +18,7 @@ dle.addEventListener('click',function(event){
 
 
 //swiper
-var swiper = new Swiper(".mySwiper", {
+new Swiper(".swiper", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
@@ -36,29 +36,17 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
-var swipers = new Swiper(".mySwipers", {
-  slidesPerView: 3,
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    "@0.00": {
-      slidesPerView: 1,
-      spaceBetween: 10,
+
+  new Swiper('.swipers', {
+    slidesPerView: 3,//한번에 보여줄 슬라이드 개수
+    spaceBetween: 10,//슬라이드 사이 여백
+    centeredSlides : true,// 1번 슬라이드가 가운데 보이기
+    loop :true,
+    autoplay :{
+    delay:5000
     },
-    "@0.75": {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    "@1.00": {
-      slidesPerView: 3,
-      spaceBetween: 40,
-    },
-    "@1.50": {
-      slidesPerView: 4,
-      spaceBetween: 50,
-    },
-  },
-});
+    pagination: {
+      el: '.promotion .swiper-pagination',//페이지 번호 요소 선택자
+      clickable:true //사용자의 페이지 번호 요소 제어 가능 여부
+    }
+    });

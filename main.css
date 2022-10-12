@@ -216,7 +216,7 @@ nav{
   font-size: 18px;
 }
 .swiper {
-  width: 100%;
+  width: 70%;
   height: 100%;
 }
 .swiper-slide {
@@ -245,44 +245,44 @@ nav{
 
 /*리뷰*/
 .swipers {
-  margin-top: 100px;
+  margin: 100px auto;
   width: 1224px;
-  height: 538px;
+  height: 498px;
 }
-.swiper-wrappers {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper_img{
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper_img .swiper-slides #imgs{
+.swiper-slide #imgs{
   display: block;
   width: 288px;
   height: 300px;
   object-fit: cover;
 }
 
-
 .star img{
   width: 69px;
   height: 11px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
 }
-.title_box img{
+.title_box{
+  width: 288px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 80px;
+  left: 50px;
+}
+.title_box .title{
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "NotoSans";
+}
+
+.title_box .icon_img{
+  display: flex;
+  width: 60px;
+  height: 60px;
+}
+.title_box .icon_img img{
   width: 24px;
   height: 24px;
 }
